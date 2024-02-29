@@ -1,793 +1,550 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-	<head>
-		<title>Silverhat Capital</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="color-scheme" content="light only" />
-        <meta name="description" content="The future of quantitative trading: Beating the market, one algorithm at a time." />
-        <meta property="og:site_name" content="Silverhat Capital" />
-        <meta property="og:title" content="Silverhat Capital" />
-        <meta property="og:type" content="website" />
-        <meta property="og:description" content="The future of quantitative trading: Beating the market, one algorithm at a time." />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="800" />
-        <meta property="og:url" content="www.silverhatcapital.com" />
-        <link rel="canonical" href="www.silverhatcapital.com" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <link rel="icon" type="image/x-icon" href="https://aboutus-pocketalgo.carrd.co/assets/images/image02.jpg?v=3f3ca6f9">
-	</head>
-    
-	<body class="is-preload">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <title>OnePage Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-square"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Silverhat Capital</h1>
-                                <h4>Beating the market,<br>one algorithm at a time.</h4>
-							</div>
-						</div>
-						<nav>
-							<ul>
-                                <li><a href="#portfolio">Portfolio</a></li>
-                                <li><a href="#about">About</a></li>
-								<li><a href="#articles">Articles</a></li>
-								<li><a href="#contact">Contact</a></li>
-                                
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
-                    
-                
-				<!-- Main -->
-					<div id="main">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-						<!-- Portfolio -->
-							<article id="portfolio">
-								<h2 class="major">Portfolio</h2>
-                                <h3>Global FX - systematic</h3>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-                                <!--------------------------------- Performance chart here ---------------------------->
-                                    
-                            <div id="chart"></div>
-                                <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                                <script>
-                                        var options = {
-                                  series: [{
-                                    name: "Cumulative return in %",
-                                    data: [0.91, 12.00, 39.52, 47.22]
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-                                }],
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-                                  chart: {
-                                      height: 350,
+  <!-- =======================================================
+  * Template Name: OnePage
+  * Updated: Feb 21 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 
-                                      type: 'area',
-                                      opacity: 0,
-                                      zoom: {
-                                        enabled: false
-                                      },
+<body>
 
-                                      toolbar: {
-                                        show: true,
-                                        tools: {
-                                          download: false
-                                        }
-                                      }
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
 
+      <h1 class="logo"><a href="index.html">OnePage</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-                                },
-                                
-                                tooltip:{
-                                    theme: 'dark',
-                                    
-                                
-                                },
-                                            
-                                dataLabels: {
-                                  enabled: false,
-                                   background: {
-                                    enabled: true,
-                                    foreColor: '#fff',
-                                    padding: 1,
-                                    borderRadius: 2,
-                                    borderWidth: 1,
-                                    borderColor: '#fff',
-                                    opacity: 0.9,
-                                    dropShadow: {
-                                      enabled: false,
-                                      top: 1,
-                                      left: 1,
-                                      blur: 1,
-                                      color: '#000',
-                                      opacity: 0.45
-                                    }
-                          },
-                                },
-                                stroke: {
-                                  curve: 'smooth',
-                                    colors: '#FFFFFF'
-                                },
-                                title: {
-                                  
-                                  align: 'left',
-                                    style: {
-                              color:  '#FFFFFF',
-                                        fontFamily: 'Helvetica',
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
 
-                            },
-                                },
-                                grid: {
-                                    show: false,
-                                  row: {
-                                    colors: ['#transparent', 'transparent'], // takes an array which will be repeated on columns
-                                    opacity: 0
-                                  },
-                                },
+    </div>
+  </header><!-- End Header -->
 
-                                yaxis: {
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>Trends don't lie.</h1>
+          <h2>Join over 1k members in creating your own systematic trend following portfolio just like the hedge funds.</h2>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      </div>
+            
+      <div class="row icon-boxes">
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title"><a href="">Live trend dashboard</a></h4>
+            <p class="description">Access my live database of trending assets, covering the major exchanges. Every asset is put through the "tail watching" model, providing you with actionable insights.</p>
+          </div>
+        </div>
 
-                                 axisBorder: {
-                                  show: true,
-                                fontSize:  '14px',
-                                  color: '#FFFFFF',
-                                  offsetX: 0,
-                                  offsetY: 0
-                              },
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-palette-line"></i></div>
+            <h4 class="title"><a href="">Portfolio spotlight</a></h4>
+            <p class="description">Discover my strategies, in-depth case studies, back-test results, and mistakes to avoid. These insights are delivered straight to your inbox. No fuss, no muss.</p>
+          </div>
+        </div>
 
-                                labels: {
-                                  show: true,
-                                  style: {
-                                      colors: ['#FFFFFF'],
-                                  },
-                              },
-                          },
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-command-line"></i></div>
+            <h4 class="title"><a href="">Updates on key events</a></h4>
+            <p class="description">Receive timely updates on key market events such as monetary policy changes, regulatory shifts and CPI updates. I got you covered.</p>
+          </div>
+        </div>
 
-                                xaxis: {
-                                  categories: ['Jul 22', 'Dec 22', 'Jun 23', 'Dec 23'],
+          <!--
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-fingerprint-line"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          </div>
+        </div>
+        
+        -->
 
-                                     axisBorder: {
-                                  show: true,
-                                  color: '#FFFFFF',
-                                  fontSize:  '14px',
-                                  offsetX: 0,
-                                  offsetY: 0
-                              },
+      </div>
+    </div>
+  </section><!-- End Hero -->
 
-                                labels: {
-                                  show: true,
-                                  style: {
-                                      colors: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
-                                  },
-                              },
-                                }
+  <main id="main">
 
-                                };
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
 
-                                var chart = new ApexCharts(document.querySelector("#chart"), options);
-                                chart.render();
+        <div class="row">
 
-                                        </script>
-                               
-                                <!---------------------------------- Performance chart ends ------------------------------>
-                                
-                               
-                                    <!----<img src="images/pic01.jpg" alt="" />-->
-                                
-                                <hr/>
-                                <h3>A Systematic & algorithmic approach</h3>
-                               
-                                    <blockquote><p>Designed to maintain low to negative correlation to traditional asset classes,
-                                    the portfolio capitalizes on short to mid-term currency movements using a combination of divergent and
-                                    convergent algorithmic strategies.      </p>
-                                    
-                                    </blockquote>
-                                
-                                <hr/>
-                                
-                                <h3>Performance metrics</h3>
-                                <blockquote>
-                                    <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Cumulative return</td>
-                                                    <td><h4>47.22%</h4></td>
-                                                </tr>
-                                                
-                                                <tr>
-                                                    <td>Max. equity drawdown</td>
-                                                    <td><h4>11.9%</h4></td>
-                                                </tr>
-                                                    
-                                                <tr>
-                                                    <td>Profit factor</td>
-                                                    <td><h4>1.75</h4></td>
-                                                </tr>
-                                                
-                                                <tr>
-                                                    <td>Avg. win rate</td>
-                                                    <td><h4>82.8%</h4></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                </blockquote>
-                                
-                                <!-- Portfolio End -->
-                                
-							</article>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<!--<span class="image main"><img src="images/pic03.jpg" alt="" /></span>-->
-                                
-                                
-								<p>
-                                    We are a team of experienced quantitative traders with a mission to democratize wealth. Using advanced statistical methods and data mining, our proprietary algorithms help institutional and retail traders extract alpha from the markets. 
-                                </p>
-                                
-                                <!------------------ Step 1: Strategy design --------------->
-                                <hr>
-                                <h3 class="icon fa-gem"> Step 1: Strategy design</h3>
-                                <blockquote>
-                                Alpha discovery via discretionary hypotheses validation & tick data mining
-                                </blockquote>
-                                
-                                <!------------------ Step 2: Algorithm development --------------->
-                                
-                                <h3 class="icon fa-gem"> Step 2: Algo development</h3>
-                                <blockquote>
-                                Broker-agnostic, modularized codebase designed to ensure ease of testing & deployment
-                                </blockquote>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div>
 
-                                <!------------------ Step 3: Strategy optimzation --------------->
-                                
-                                <h3 class="icon fa-gem"> Step 3: Strategy optimization</h3>
-                                <blockquote>
-                                Algorithms are put through a rigorous robustness testing process utilizing Monte Carlo simulations, walk-forward analysis & multi-market validation
-                                </blockquote>
-                                
-							</article>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div>
 
-                        <!-- Articles -->
-							<article id="articles">
-								<h2 class="major">Articles</h2>
-								<!--<span class="image main"><img src="images/pic02.jpg" alt="" /></span>-->
-                                
-                                <!-- Article 4 -->
-                                <blockquote>
-                                <a href ="https://www.linkedin.com/posts/silverhatcapital_what-its-like-to-run-10000-monte-carlo-activity-7084448530894909441--31Y?utm_source=share&utm_medium=member_desktop" target="_blank"><h3>What is it like to run 10,000 Monte Carlo simulations for a trading algorithm?</h3></a>
-                                    <h5>Jul 10, 2023</h5>
-                                </blockquote>
-                                
-                                <!-- Article 3 -->
-                                <blockquote>
-                                <a href="https://www.linkedin.com/pulse/i-asked-openais-chatgpt-write-me-trading-algorithm-blew-william-chung/" target="_blank"><h3>I asked OpenAI's ChatGPT to write me a trading algorithm. It blew my mind.</h3></a>
-                                    <h5>Jan 16, 2023</h5>
-                                </blockquote>
-                                
-                                <!-- Article 2 -->
-                                <blockquote>
-                                <a href="https://www.linkedin.com/pulse/i-took-random-trades-year-heres-how-my-portfolio-performed-chung/" target="_blank"><h3>I took random trades for a year. Here's how my portfolio performed.</h3></a>
-                                    <h5>Feb 23, 2019</h5>
-                                </blockquote>
-                                
-                                <!-- Article 1 -->
-                                <blockquote>
-                                <a href="https://www.linkedin.com/pulse/you-good-investor-just-lucky-william-chung/" target="_blank"><h3>Are you a good investor? Or are you just lucky?</h3></a>
-                                    <h5>Sep 21, 2018</h5>
-                                </blockquote>
-                                
-							</article>
-                        
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-                                
-                                <form action="https://api.web3forms.com/submit" method="POST">
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div>
 
-                                    <input type="hidden" name="access_key" value="5b300ccf-db24-41da-a133-de5d2499403d">
-                                    <input type="hidden" name="subject" value="New submission from Silverhat website">
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div>
 
-                                    <div class="fields">
-										<div class="field half">
-											<label for="name">Name*</label>
-											<input type="text" name="name" id="name" required/>
-										</div>
-										<div class="field half">
-											<label for="email">Email*</label>
-											<input type="text" name="email" id="email" required/>
-										</div>
-										<div class="field">
-											<label for="message">Message*</label>
-											<textarea name="message" id="message" rows="4" required></textarea>
-										</div>
-									</div>
-                                        
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-                                        
-									</ul>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div>
 
-                                </form>
-                            
-                                
-                                <!----- Original form ------>
-								<!--<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>-->
-                                
-								<ul class="icons">
-                                    <li><a href="https://www.linkedin.com/company/silverhatcapital" class="icon brands fa-linkedin" target="_blank"></a></li>
-                                    <li><a href="https://twitter.com/silverhatcap" class="icon brands fa-twitter" target="_blank"></a></li>
-                                    <li><a href="https://www.instagram.com/silverhattrader" class="icon brands fa-instagram" target="_blank"></a></li>
-                                    <li><a href="https://www.tiktok.com/@silverhattrader" class="icon brands fa-tiktok" target="_blank"></a></li>
-									<!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
-									<!--<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-									<!--<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>-->
-									<!--<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>-->
-								</ul>
-                                
-                                <!----- Original form ------>
-                                
-                                <script src="https://web3forms.com/client/script.js" async defer></script>
-                                
-							</article>
-                        
-                         <!-- Privacy policy -->
-                                <article id="privacypolicy">
-                                    <h2 class="major">Privacy policy</h2>
+        </div>
 
-                                    <p>
-                                        SilverhatCapital.com is serious about protecting your online privacy. This Privacy Statement explains our views and practices concerning privacy, and how they may pertain to you as a user of our website. <br><br>
-                                        “You” or “Your” means you as a participant in or as a user of the SilverhatCapital.com website. “We” or “Our” or “Us” means SilverhatCapital.com. “Our site” means SilverhatCapital.com <br><br>
-                                        All information transmitted, printed or otherwise submitted to SilverhatCapital.com via this website shall be deemed to be the property of SilverhatCapital.com and SilverhatCapital.com shall be free to use such information for any lawful purpose as detailed herein. <br><br>
-                                        This site contains links to other sites and we are not responsible for the privacy practices or the content of such sites. <br><br>
-                                        We reserve the right to release such information to law enforcement or other governmental officials as we, in our sole and absolute discretion, deem necessary to comply with the law. <br><br>
-                                        
-                                        Section 1: Collected Information <br>
-                                        We automatically collect and/or track the following: <br><br>
-                                        1) Information knowingly provided by you through on-line forms, registration forms, surveys, and/or other entries, such as email addresses, personal, financial or demographic information; <br>
-                                        2) Information, user specific or aggregate, on what pages our visitors access; and <br>
-                                        3) E-mail addresses of visitors that communicate with SilverhatCapital.com via e-mail. <br><br>
-                                        
-                                        Section 2: Use of Data Collected <br>
-                                        We use your personal, demographic and profile data to enhance your experience at our site and to enable us to present content we think you might be interested in. We use your contact information to send you information about our company and promotional material from our partners. We may also use your personal, demographic and profile data to improve our site, for statistical analysis, for marketing and promotional purposes, and for editorial or feedback purposes for our advertisers. Information collected by us may be added to our databases and used for future telemarketing, SMS text-messaging, e-mails or postal mailings regarding site updates, new products and services, upcoming events, and/or status of orders placed online. By using this site, you agree that you may be contacted in any manner contemplated in this section even if your number is found on a do not call registry, in-house list or similar registry. <br><br>
-                                        
-                                        Section 3: Disclosure of Data to Third Parties <br>
-                                        If you choose to provide personal information, it will be used for the following purposes: <br><br>
-                                        1) Considering you for a SilverhatCapital.com product; <br>
-                                        2) As required bylaw; and <br>
-                                        3) For marketing products and services which we determine, in our sole judgment, that you might find of interest. We reserve the right to share, rent, sell, or otherwise disclose data we collect to third parties. Any third party we share, rent, sell, or otherwise disclose data to will be prescreened by us, determined by us to be reputable, and will use the personal data for marketing products and services which we determine, in our sole judgment, that you might find of interest. <br><br>
-                                        
-                                        Section 4: Your Opt-Out Rights <br>
-                                        You may opt-out of receiving communications from us and/or our partners by not submitting your information. We also allow you to remove your information from our marketing lists. If you remove your information from our marketing lists it will no longer be used by us to send promotional correspondence to you. You can remove your information from our marketing lists by clicking on the “Unsubscribe” link at the bottom of every email we send you, or by sending your request, in writing, via email to: infoATsilverhatcapitalDOTcom (Please replace “AT” with @ and “DOT” with .) <br><br>
-                                        
-                                        Section 5: We Do Not Intend to Collect Data from Children <br>
-                                        The information and services provided to us or our affiliates, sponsors, and advertisers are not intended to be viewed by children (under 18 years old). No information collected from children is knowingly used for any marketing or promotional purposes whatsoever, either inside or outside SilverhatCapital.com. No part of SilverhatCapital.com’s web site is structured to attract anyone under the age of 18. <br><br>
-                                        
-                                        Section 6: Our Right to Contact You <br>
-                                        We reserve the right to contact you regarding your account status and changes to subscriber agreements, privacy policy, or any other policies or agreements relevant to you. <br><br>
-                                        
-                                        Section 7: Our Right to Change <br>
-                                        We reserve the right to change this policy at any time by notifying you of the existence and location of the new or revised privacy policy or by posting the changes online at our site. <br><br>
-                                        
-                                        Section 8: Our Contact Information <br>
-                                        If you have any questions about this privacy statement, the practices of this site, or your dealings with this website, you can contact us via email sent to: infoATsilverhatcapitalDOTcom (Please replace “AT” with @ and “DOT” with .) <br><br>
-                                        
-                                        Section 9: Anti Spam Policy. Can-Spam Act Compliance <br>
-                                        SilverhatCapital.com is dedicated to ensuring compliance with the ‘Can-Spam Act’, which took effect January 1, 2004. You may receive email from SilverhatCapital.com in the following circumstances: <br><br>
-                                        
-                                        1) Acknowledging your application has been received and requesting additional action <br>
-                                        2) Requests for additional information to support your current application <br>
-                                        3) Response to your inquiries regarding the status of your transactional requests <br>
-                                        4) Thanking you for your valued business <br>
-                                        5) Advertisements for our products, services, changes in services, new product availability <br>
-                                        6) Advertisements for third party products and services where we have determined that such product or service may be of interest to our customers <br><br>
-                                        
-                                        
-                                        To ensure compliance with the Can-Spam Act, SilverhatCapital.com has implemented the following guidelines for email delivery: <br>
+      </div>
+    </section><!-- End Clients Section -->
 
-                                        1) All emails sent to you by SilverhatCapital.com will clearly identify SilverhatCapital.com as the sender. FROM / SENDER: someone@SilverhatCapital.com (NOTE: The actual sender will alter from department to department, but all from addresses will end with @SilverhatCapital.com). <br>
-                                        2) The Subject Line of any email you receive will always accurately describe the subject matter of the email. <br>
-                                        3) Any email from SilverhatCapital.com will include the ability to unsubscribe from future email messages. <br>
-                                        4) Unsubscribing will ensure the customer is removed from ALL lists at SilverhatCapital.com; this excludes customer service emails regarding the processing and status of a current product. <br>
-                                        5) All emails sent to you directly by SilverhatCapital.com include valid postal address information in the footer. <br>
-                                        6) All third party marketing partners are required to comply with the Can-Spam Act. <br>
-                                        7) Emails sent to you directly by SilverhatCapital.com will include an email address and physical address where you can send suggestions, complaints or other correspondence. <br><br>
-                                        
-                                        Section 10: Information for ISPs <br>
-                                        Website: SilverhatCapital.com <br>
-                                        Email Address: infoATsilverhatcapitalDOTcom <br>
-                                        (Please replace “AT” with @ and “DOT” with .) <br><br>
-                                        
-                                        SilverhatCapital.com understands consumers’ concerns over the use of their personal information. We hope this information will relieve any concerns your company may have regarding our email policies. SilverhatCapital.com and its affiliated sites use only an “opt-in or opt out” method of obtaining customer information, and it is not our policy or desire to send unsolicited email. We obtain email addresses and personal information from third parties that follow the same set of policies. SilverhatCapital.com email messages sent always include information about the origin of the emails and instructions on how recipients can unsubscribe from receiving future email messages. <br><br>
-                                        
-                                        From time to time, SilverhatCapital.com will enter into an arrangement with a third party website to allow individuals to opt into our marketing program on those third party websites. In each case the third party websites have represented and warranted to us, among other things, <br><br>
-                                        
-                                        1) That the data was collected voluntarily from individuals on website registrations and co-registrations, <br>
-                                        2) That the sellers have a right, under any applicable privacy statements, to transfer the data to us, and <br>
-                                        3) That SilverhatCapital.com has the right to send marketing offers to the individuals. <br><br> 
-                                        
-                                        We hope this information satisfies any questions or concerns you may have regarding the email practices of SilverhatCapital.com. If you have additional questions or wish to discuss this matter further, please contact us at: infoATsilverhatcapitalDOTcom (Please replace “AT” with @ and “DOT” with .)
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
 
-                                        </b>
-                                    </p>
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
 
-                                </article>
-                        
-                        <!-- Disclaimer -->
-                                <article id="disclaimer">
-                                    <h2 class="major">Disclaimer</h2>
-                                    <!--<span class="image main"><img src="images/pic03.jpg" alt="" /></span>-->
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
 
-                                    <p>
-                                        This is neither a recommendation to purchase or sell any of the shares, securities or other instruments mentioned in this document or referred to; nor can this document be treated as professional advice to buy, sell or take a position in any shares, securities or other instruments. The information contained herein is based on the study and research of William Chung (“the Authors”); and are merely the written opinions and ideas of the Authors, and is as such strictly for educational purposes and/or for study or research only.
-                                        <br><br>
-                                        This information should not and cannot be construed as or relied on and (for all intents and purposes) does not constitute financial, investment or any other form of advice. Any investment involves the taking of substantial risks, including (but not limited to) complete loss of capital. Every investor has different strategies, risk tolerances and time frames. You are advised to perform your own independent checks, research or study; and you should contact a licensed professional before making any investment decisions.
-                                        <br><br>
-                                        The Authors make it unequivocally clear that there are no warranties, express or implied, as to the accuracy, completeness, or results obtained from any statement, information and/or data set forth herein. The Authors, its related and affiliate companies and/or their directors, executives and employees shall in no event be held liable to any party for any direct, indirect, punitive, special, incidental, or consequential damages arising directly or indirectly from the use of any of this material. 
-                                    </p>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
 
-                                </article>
-                        
-                        <!-- Speaking -->
-                                <article id="speaking">
-                                    <h2 class="major">Speaking</h2>
-                                        
-                                    <h3>We love to speak about the following topics:</h3>
-                                        <blockquote>
-                                            <li>Long-term, systematic investing</li>
-                                            <li>Creating passive income through algorithmic trading</li>
-                                            <li>Trading strategy design, development & deployment</li>
-                                            <li>Other investing & trading related topics</li>
-                                        </blockquote>
-                                    
-                                    <!-- Reused contact form -->
-                                    <h3 class="major">Let's talk!</h3>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div><!-- End testimonial item -->
 
-                                    <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div><!-- End testimonial item -->
 
-                                        <input type="hidden" name="access_key" value="5b300ccf-db24-41da-a133-de5d2499403d">
-                                        <input type="hidden" name="subject" value="New submission from Silverhat website">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div><!-- End testimonial item -->
 
-                                        <div class="fields">
-                                            <div class="field half">
-                                                <label for="name">Name*</label>
-                                                <input type="text" name="name" id="name" required/>
-                                            </div>
-                                            <div class="field half">
-                                                <label for="email">Email*</label>
-                                                <input type="text" name="email" id="email" required/>
-                                            </div>
-                                            <div class="field">
-                                                <label for="message">Tell us about your event*</label>
-                                                <textarea name="message" id="message" rows="4" required></textarea>
-                                            </div>
-                                        </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div><!-- End testimonial item -->
 
-                                        <ul class="actions">
-                                            <li><input type="submit" value="Send details" class="primary" /></li>
-                                            <li><input type="reset" value="Reset" /></li>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
 
-                                        </ul>
+      </div>
+    </section><!-- End Testimonials Section -->
 
-                                    </form>
-                                    <!----- Original form ------>
-                                
-                                <script src="https://web3forms.com/client/script.js" async defer></script>
-                                </article>
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
 
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+        <div class="row">
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+          <div class="col-lg-4 col-md-6" data-aos="zoom-im" data-aos-delay="100">
+            <div class="box">
+              <h3>The non-committal</h3>
+              <h4><sup>$</sup>19<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li class="na">Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Subscribe</a>
+              </div>
+            </div>
+          </div>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box featured">
+              <h3>Just tell me what to do</h3>
+              <h4><sup>$</sup>39<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li class="na">Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Subscribe</a>
+              </div>
+            </div>
+          </div>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="100">
+            <div class="box">
+              <h3>Give me more!</h3>
+              <h4><sup>$</sup>TBD<span> / month</span></h4>
+              <ul>
+                <li>Aida dere</li>
+                <li>Nec feugiat nisl</li>
+                <li>Nulla at volutpat dola</li>
+                <li>Pharetra massa</li>
+                <li>Massa ultricies mi</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Subscribe</a>
+              </div>
+            </div>
+          </div>
 
-								<section>
-									<h3 class="major">Lists</h3>
+        </div>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+      </div>
+    </section><!-- End Pricing Section -->
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                </p>
+              </div>
+            </li>
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                </p>
+              </div>
+            </li>
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                </p>
+              </div>
+            </li>
 
-								<section>
-									<h3 class="major">Form</h3>
-                                    
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Silverhat Capital" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="info@silverhatcapital.com" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                </p>
+              </div>
+            </li>
 
-							</article>
+          </ul>
+        </div>
 
-					</div>
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
 
-				<!-- Footer -->
-					<footer id="footer">
-                        <ul class="icons">
-                                    <li><a href="https://www.linkedin.com/company/silverhatcapital" class="icon brands fa-linkedin" target="_blank"></a></li>
-                                    <li><a href="https://twitter.com/silverhatcap" class="icon brands fa-twitter" target="_blank"></a></li>
-                                    <li><a href="https://www.instagram.com/silverhattrader" class="icon brands fa-instagram" target="_blank"></a></li>
-                                    <li><a href="https://www.tiktok.com/@silverhattrader" class="icon brands fa-tiktok" target="_blank"></a></li>
-									<!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
-									<!--<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-									<!--<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>-->
-									<!--<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>-->
-								</ul>
-                        
-                        <p class="copyright">
-                            Sitemap:
-                            <a href="#about">About</a> |
-                            <!--a href="#speaking">Speaking</a>--> |
-                            <a href="#privacypolicy">Privacy policy</a> |
-                            <a href="#disclaimer">Disclaimer</a> 
-                        </p>
-                        
-                        
-                        <p class="copyright">&copy; 2024 Silverhat Capital. All rights reserved.</p>
-					</footer>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
 
-			</div>
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
 
-		<!-- BG -->
-			<div id="bg"></div>
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <div class="row mt-5">
 
-	</body>
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row gy-2 gx-md-3">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group col-12">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group col-12">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3 col-12">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center col-12"><button type="submit">Send Message</button></div>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>OnePage</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>OnePage</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
