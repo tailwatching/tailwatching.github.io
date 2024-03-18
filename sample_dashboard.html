@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tail watching - Invest like a hedge fund.</title>
+        <meta name="description" content="Invest based on math, not intuition." />
+        <meta property="og:site_name" content="Tail Watching" />
+        <meta property="og:title" content="Tail Watching" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Invest based on math, not intuition." />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:url" content="www.tailwatching.com" />
+        <link rel="canonical" href="www.tailwatching.com" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+          <script src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
+          <script src="https://cdn.datatables.net/fixedcolumns/5.0.0/js/dataTables.fixedColumns.js"></script>
+
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap5.css">
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/5.0.0/css/fixedColumns.bootstrap4.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            .table.dataTable thead tr { 
+              background-color: #dce2e3 !important;
+            }
+            .page-item.active .page-link {
+              background-color: #dce2e3 !important;
+            }
+            .page-link {
+              color: black !important;
+            }
+            .table thead th {
+              background-color: #dce2e3 !important;
+            }
+
+          </style>
+
+    </head>
+    <body>
+        
+        <!-- Sample dashboard section-->
+            <div class="container container-md">
+                <br>
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bolder">Sample Tail Watching Dashboard</h2>
+                    </div>
+                        
+                    <div class="row">
+                    <i><h7>Note: This is a sample of what the live dashboard looks like. In this sample, the numbers you see are only for illustration purposes and are not updated in real-time. <br><br>In the actual live dashboard, you will receive real-time updates for > 700 assets.</h7></i>
+                    </div>
+                    <br>
+                    <hr>
+                    
+                    <div class="row">
+                        <h4>Tail watching: Live trend alerts</h4>
+                        <br>
+                    </div>
+                
+                    <br>
+                    <div class="row">
+                      <div class="form-row">
+                          <div class="col-auto">
+                            <a id="refreshAlertBtn" class="btn btn-dark"><i class="material-icons left" style="vertical-align: middle;">refresh</i> Refresh alerts</a>
+                          </div>
+                        </div>
+                    </div>
+                <br>
+                    <div class="row">
+                        <table id="alerts-data-table" class="table table-hover table-bordered display nowrap" width="100%">
+                            
+                            <script>
+                                const table = new DataTable('#alerts-data-table', {
+                                scrollCollapse: true,
+                                scrollX:        true,
+                                fixedColumns: {
+                                  start: 1
+                                },
+                                
+                                order: [1, 'asc'], 
+
+                                columns: [
+                                  {"title":"Ticker"},
+                                  {"title":"Signal"},   
+                                  {"title":"Name"},
+                                  {"title":"Exchange"},
+                                  {"title":"Avg. return p.a.*"},
+                                  {"title":"Price"},
+                                  {"title":"Market cap"},
+                                  {"title":"Daily vol"},
+                                ]
+                                
+                              });
+                            
+                            addNewRow();
+                                
+                            function addNewRow() {
+                                table.rows.add(
+                                    
+                                [[
+                                    'MSFT',
+                                    'Buy',
+                                    'Microsoft Corp',
+                                    'NASDAQ',
+                                    '29.27%',
+                                    '$416.42',
+                                    '$3,092,218,422,110',
+                                    '5,010,219'
+                                ],
+                                
+                                [
+                                    'AAPL',
+                                    'Buy',
+                                    'Apple Inc',
+                                    'NASDAQ',
+                                    '246.95%',
+                                    '$172.62',
+                                    '$2,664,191,111,639',
+                                    '1,070,123'
+                                ],
+                                 
+                                [
+                                    'AMZN',
+                                    'Hold',
+                                    'Amazon.com Inc',
+                                    'NASDAQ',
+                                    '45.49%',
+                                    '$174.42',
+                                    '$1,811,158,074,786',
+                                    '501,888'
+                                ],
+                                 
+                                [
+                                    'BRK.B',
+                                    'Hold',
+                                    'Berkshire Hathaway Inc Class B',
+                                    'NYSE',
+                                    '17.13%',
+                                    '$174.42',
+                                    '$1,811,158,074,786',
+                                    '501,888'
+                                ],
+                                
+                                [
+                                    'LLY',
+                                    'Hold',
+                                    'Eli Lilly And Co',
+                                    'NYSE',
+                                    '32.99%',
+                                    '$754.14',
+                                    '$716,585,469,309',
+                                    '3,730,053'
+                                ],
+                                
+                                [
+                                    'INTC',
+                                    'Exit buy',
+                                    'Intel Corp',
+                                    'NASDAQ',
+                                    '6.62%',
+                                    '$42.64',
+                                    '$180,281,917,419',
+                                    '1,372,989'
+                                ],
+                                 
+                                [
+                                    'GS',
+                                    'Exit buy',
+                                    'Goldman Sachs Group Inc',
+                                    'NYSE',
+                                    '15.76%',
+                                    '$387.21',
+                                    '$126,061,091,564',
+                                    '3,763,948'
+                                ],
+                                 
+                                [
+                                    'HKG:0001',
+                                    'Buy',
+                                    'CK Hutchison Holdings Ltd',
+                                    'HKG',
+                                    '5.76%',
+                                    '40.70 HKD',
+                                    '155,882,753,022 HKD',
+                                    '4,058,852'
+                                ],
+                                 
+                                [
+                                    'HKG:0002',
+                                    'Hold',
+                                    'CLP Holdings Limited',
+                                    'HKG',
+                                    '2.86%',
+                                    '63.80 HKD',
+                                    '161,187,508,072 HKD',
+                                    '1,417,397'
+                                ],
+                                 
+                                [
+                                    'HKG:0003',
+                                    'Exit buy',
+                                    'Hong Kong and China Gas Co Ltd',
+                                    'HKG',
+                                    '11.29%',
+                                    '5.96 HKD',
+                                    '111,212,766,311 HKD',
+                                    '4,502,765'
+                                ],
+                                 
+                                [
+                                    'HKG:0005',
+                                    'Hold',
+                                    'HSBC Holdings plc',
+                                    'HKG',
+                                    '1.82%',
+                                    '59.45 HKD',
+                                    '1,130,544,613,008 HKD',
+                                    '12,248,152'
+                                ],
+                                 
+                                [
+                                    'LON:WTB',
+                                    'Buy',
+                                    'Whitbread plc',
+                                    'LON',
+                                    '5.61%',
+                                    '3,203.93 GBX',
+                                    '5,935,052,951.00 GBP',
+                                    '17,043'
+                                ],
+                                 
+                                [
+                                    'LON:PSON',
+                                    'Buy',
+                                    'Pearson plc',
+                                    'LON',
+                                    '21.28%',
+                                    '1,016.00 GBX',
+                                    '6,959,982,890 GBP',
+                                    '34,529'
+                                ],
+                                 
+                                [
+                                    'LON:BA',
+                                    'Hold',
+                                    'BAE Systems plc',
+                                    'LON',
+                                    '2.43%',
+                                    '1,302.00 GBX',
+                                    '39,434,917,130 GBP',
+                                    '131,081'
+                                ],
+                                
+                                [
+                                    'LON:BARC',
+                                    'Hold',
+                                    'Barclays PLC',
+                                    'LON',
+                                    '4.11%',
+                                    '176.38 GBX',
+                                    '26,699,924,521 GBP',
+                                    '1,056,550'
+                                ],
+                                 
+                                [
+                                    'LON:MNDI',
+                                    'Exit buy',
+                                    'Mondi Plc',
+                                    'LON',
+                                    '7.98%',
+                                    '1,336.50 GBX',
+                                    '5,897,271,000 GBP',
+                                    '44,710'
+                                ],
+                                 
+                                [
+                                    'LON:ABF',
+                                    'Exit buy',
+                                    'Associated British Foods plc',
+                                    'LON',
+                                    '1.26%',
+                                    '2,320.00  GBX',
+                                    '17,492,022,204 GBP',
+                                    '8,757'
+                                ],
+                                                
+                            
+                            ])
+                                    
+                                    .draw(false);
+                            }
+                            </script>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="row">
+
+                      <i>*Avg. return p.a.: Annualized historical return based on the Tail Watching model, excluding dividends</i>
+                    </div>
+                <br>
+                </div>
+
+    </body>
+</html>
