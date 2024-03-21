@@ -189,31 +189,43 @@
                 <!------------ Backtest table ------------->
                 <div class="container container-md">
                     <div class="row px-3">
-                        <table id="backtest-table" class="table table-hover table-sm display text-center">
-                            <thead class="text-center">
-                                <th>No. of years</th>
-                                <th>MSFT return</th>
-                                <th>MSFT return p.a.</th>
-                                <th>SPY return</th>
-                                <th>SPY return p.a.</th>
+                        <table id="instructions-table" class="table table-hover display nowrap table-sm table-responsive w-25">
+                            <thead>
+                                <th>Metric</th>
+                                <th>Details</th>
                             </thead>
                             <tr>
-                                <td>20</td>
+                                <td class="bg-light">No. of years:</td>
+                                <td>20 years</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">MSFT return:</td>
                                 <td>585.44%</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">MSFT return p.a.:</td>
                                 <td>29.27%</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">SPY return:</td>
                                 <td>334.85%</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">SPY return p.a.:</td>
                                 <td>16.74%</td>
                             </tr>
-
+                            
                         </table>
-
                     </div>
+                    
+                    <!--------------------- End of backtest table ----------------->
+                    
                     <div class="px-1">
                         Note: Modelled returns exclude dividend gains, spread and txn. costs. Past performance is no guarantee of future results.
                         Read the full disclaimer <a href="" data-bs-toggle="modal" data-bs-target="#disclaimer_modal">here</a>.
                     </div>
                             
-                    <!--------------------- End of backtest table ----------------->
+                   
                 
                     </div>
                 
