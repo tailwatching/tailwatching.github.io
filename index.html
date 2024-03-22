@@ -21,7 +21,39 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-    
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+          <script src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
+          <script src="https://cdn.datatables.net/fixedcolumns/5.0.0/js/dataTables.fixedColumns.js"></script>
+
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap5.css">
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/5.0.0/css/fixedColumns.bootstrap4.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            .table.dataTable thead tr { 
+              background-color: #dce2e3 !important;
+            }
+            .page-item.active .page-link {
+              background-color: #dce2e3 !important;
+            }
+            .page-link {
+              color: black !important;
+            }
+            .table thead th {
+              background-color: #dce2e3 !important;
+            }
+        
+            thead {
+             position: absolute !important;
+             top: -9999px !important;
+             left: -9999px !important;
+            }
+          </style>
+        
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTDNC94TT9"></script>
     <script>
@@ -42,9 +74,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="demo_dashboard.html">Demo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#backtests">Backtests</a></li>
                         <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
@@ -102,7 +135,7 @@
         <section id="membership" class="bg-light py-5 border-bottom">
             <div class="container px-4 my-3">
                 <div class="text-center mb-5">
-                    <h2 class="fw-bolder">Membership</h2>
+                    <h2 class="fw-bolder">Join our membership</h2>
                 </div>
                 <div class="row gx-5 justify-content-center">
                     
@@ -223,7 +256,7 @@
                                     <div class="d-flex">
                                         <div class="ms-1">
                                             <div class="text-center">
-                                            <img src="assets/profilephoto2.jpg" class="w-50 rounded" alt="Responsive image">
+                                            <img src="assets/profile_photo.jpeg" class="w-50 rounded" alt="Responsive image">
                                             </div>
                                             <br>
                                             <p class="mb-1">Hi friend! <br><br>My name is William. I'm a systematic investor and algorithmic trader. I work with hedge funds, family offices and institutional traders to design, develop and deploy systematic strategies.</p>
@@ -300,7 +333,7 @@
                                                 </ul>
 
                                                 <p>
-                                                You can find a demo <a href="demo_dashboard.html" target="_blank" style="color: blue">here</a>.
+                                                You can find a demo <a href="demo_dashboard.html" style="color: blue">here</a>.
                                                 </p>
                                             <hr>
 
@@ -367,7 +400,7 @@
                         </ul>
                         
                         <p>
-                        You can find a demo <a href="demo_dashboard.html" target="_blank" style="color: blue">here</a>.
+                        You can find a demo <a href="demo_dashboard.html" style="color: blue">here</a>.
                         </p>
                       </div>
                     </div>
@@ -452,6 +485,112 @@
             </div>
             
         </section>
+        
+        <!-- Backtests section-->
+        <section id="faq" class="bg-light py-5 border-bottom">
+            <div class="container px-4 my-3">
+                <div class="mb-5">
+                    <h2 class="text-center fw-bolder">Tail Watching Backtests</h2>
+                    <div class="row">
+                        
+                        <style>
+
+                            .card tbody tr {
+                                float: left;
+                                width: 25em;
+                                margin: 0.5em;
+                                border-radius: 0.5em;
+                                background-color: white !important;
+                                box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.25);
+                            }
+                            .card tbody tr td {
+                                display: block;
+                                border: 0;
+                            }
+                            
+                        </style>
+                        <table id="backtest-search-table" class="table bg-transparent table-hover border-0" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Header 1</th>
+                                    <th>Header 2/th>
+                                </tr>
+                            </thead>
+                            
+                                <tr class='clickable-row' data-href='../performance/msft.html'>
+                                    <td><b>MSFT: Microsoft Corp</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr class='clickable-row' data-href='../performance/aapl.html'>
+                                    <td><b>AAPL: Apple Inc</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr>
+                                    <td><b>NVDA: NVIDIA Corp</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr>
+                                    <td><b>AMZN: Amazon.com Inc</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr>
+                                    <td><b>GOOGL: Alphabet Inc Class A</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr>
+                                    <td><b>BRK.B: Berkshire Hathaway Inc Class B</b></td>
+                                    <td>NYSE</td>
+                                </tr>
+                                <tr>
+                                    <td><b>LLY: Eli Lilly And Co</b></td>
+                                    <td>NYSE</td>
+                                </tr>
+                            
+                        </table>
+                        
+                        <script>
+                            $(document).ready(function () {
+                                //Only needed for the filename of export files.
+                                //Normally set in the title tag of your page.
+                                document.title = "Card View DataTable";
+                                // DataTable initialisation
+                                $("#backtest-search-table").DataTable({
+                                    dom: '<"dt-buttons"Bf><"clear">lirtp',
+                                    paging: true,
+                                    autoWidth: true,
+                                    lengthChange: false,
+                                    info: false,
+                                    buttons: [
+                                        "colvis",
+                                        "copyHtml5",
+                                        "csvHtml5",
+                                        "excelHtml5",
+                                        "pdfHtml5",
+                                        "print"
+                                    ],
+                                    initComplete: function (settings, json) {
+                                        $("#backtest-search-table").toggleClass("card");
+                                        $("#cv").on("click", function () {
+                                            if ($("#backtest-search-table").hasClass("card")) {
+                                                $(".colHeader").remove();
+                                            } 
+                                        });
+                                    }
+                                });
+
+                                $(".clickable-row").click(function() {
+                                    window.location = $(this).data("href");
+                                });
+
+                            });
+                        
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
         <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container px-4">
@@ -628,7 +767,7 @@
         </footer>
             
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script-->
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
