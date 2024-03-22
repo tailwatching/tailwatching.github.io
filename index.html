@@ -491,12 +491,13 @@
             <div class="container px-4 my-3">
                 <div class="mb-5">
                     <h2 class="text-center fw-bolder">Tail Watching Backtests</h2>
+                    <div class="row">
                         
                         <style>
 
                             .card tbody tr {
                                 float: left;
-                                width: 25em;
+                                width: 20em;
                                 margin: 0.5em;
                                 border-radius: 0.5em;
                                 background-color: white !important;
@@ -551,7 +552,7 @@
                             $(document).ready(function () {
                                 //Only needed for the filename of export files.
                                 //Normally set in the title tag of your page.
-                                document.title = "Card View DataTable";
+                               
                                 // DataTable initialisation
                                 $("#backtest-search-table").DataTable({
                                     dom: '<"dt-buttons"Bf><"clear">lirtp',
@@ -587,6 +588,7 @@
                     </div>
                 </div>
 
+            </div>
         </section>
         
         <!-- Footer-->
