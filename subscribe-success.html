@@ -20,7 +20,7 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
         
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -46,9 +46,14 @@
             .table thead th {
               background-color: #dce2e3 !important;
             }
-
+        
+            thead {
+             position: absolute !important;
+             top: -9999px !important;
+             left: -9999px !important;
+            }
           </style>
-    
+        
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTDNC94TT9"></script>
     <script>
@@ -58,18 +63,13 @@
 
       gtag('config', 'G-GTDNC94TT9');
     </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" 
-    integrity="sha512-QEiC894KVkN9Tsoi6+mKf8HaCLJvyA6QIRzY5KrfINXYuP9NxdIkRQhGq3BZi0J4I7V5SidGM3XUQ5wFiMDuWg==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" 
-    integrity="sha512-SUJFImtiT87gVCOXl3aGC00zfDl6ggYAw5+oheJvRJ8KBXZrr/TMISSdVJ5bBarbQDRC2pR5Kto3xTR0kpZInA==" crossorigin="anonymous" />
-    
+
     </head>
     <body>
-         <!-- Responsive navbar-->
+        <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4">
-                <a class="navbar-brand"><img src= "../assets/favicon-32x32.png"></a> 
+                <a class="navbar-brand"><img src= "assets/favicon-32x32.png"></a> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -84,162 +84,41 @@
                 </div>
             </div>
         </nav>
-        <header class="bg-dark">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-7">
-                        <div class="text-center my-1">
-                            <h1 class="display-6 fw-bolder text-white mb-2">Historical performance</h1>
-                            <h2 class="display-7 text-white mb-2">MSFT: Microsoft Corp</h2>
-                            <br>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </header>
-            <div class="container container-md">
-
-                    <!------------------------- Start of line chart --------------------->
-                    <div class="row py-4">
-                        <div class="table-responsive">
-                         <canvas id="myChart" class="chartjs-render-monitor" style="width: 100%; height: 500px; min-height:250px"></canvas>
-                            </div>
-                            
-                            <script>
-                                const xlabel=[];
-                                const benchmarkReturn=[];
-                                const assetReturn=[];
-                                chartIt();
-
-                                async function chartIt(){
-                                   await getDatach();
-
-                                const ctx = document.getElementById('myChart').getContext('2d');
-
-                                const myChart = new Chart(ctx, {
-                                    type: 'line',
-                                    data: {
-                                        labels:xlabel,
-
-                                        datasets: [{
-                                            label: 'MSFT return %',
-                                            fill: false,
-                                            data: assetReturn,
-                                            borderColor: 'rgb(0,0,0)',
-                                            lineTension: 0,
-                                          },
-                                          {
-                                            label: 'Benchmark return %',
-                                            fill: false,
-                                            data: benchmarkReturn,
-                                            borderColor: 'rgb(211,211,211)',
-                                          }
-                                        ]
-                                      },
-
-                                    options: {
-                                      maintainAspectRatio: false,
-                                        elements: {
-                                        line: {
-                                          tension: 0.0001
-                                        }
-                                      },
-                                      title: {
-                                        display: true,
-                                        text: 'Historical return via the Tail Watching model'
-                                      },
-                                      scales: {
-                                        xAxes: [{
-                                          display: true,
-                                        }],
-
-                                        yAxes: [{
-                                          display: true,
-
-                                          //ticks: {
-                                            //max: 2000
-                                          //}
-                                        }]
-                                      }
-                                    }
-
-                                });
-
-                            }
-
-                                async function getDatach(){
-
-                                 const response = await fetch('../assets/csv/msft.csv');
-                                 const data=await response.text();
-
-                                 const table=data.split('\n').slice(1);
-                                 table.forEach(row => {
-                                    const columns=row.split(',');
-                                    const year=columns[0];
-                                    xlabel.push(year);
-                                    const temp=columns[1];
-                                    const temp2=columns[2];
-                                    benchmarkReturn.push( parseFloat (temp));
-                                    assetReturn.push( parseFloat (temp2));
-
-                                });
-
-                             }
-                            </script>
-                        </div>
+       
+        <!-- About section-->
+        <section id="about" class="py-5 border-bottom">
+            <div class="container px-4 my-3">
+                <div class="text-center mb-5">
+                    <h3>Thank you for subscribing!</h3>
                 </div>
-                <!------------ Backtest table ------------->
-                <div class="container container-md">
-                    <div class="row px-3 justify-content-center">
-                        <table id="instructions-table" class="table table-hover display nowrap table-sm table-responsive w-auto">
-                            <thead>
-                                <th>Metric</th>
-                                <th>Metric value</th>
-                            </thead>
-                            <tr>
-                                <td class="bg-light">No. of years:</td>
-                                <td>20 years</td>
-                            </tr>
-                            <tr>
-                                <td class="bg-light">MSFT return:</td>
-                                <td>585.44%</td>
-                            </tr>
-                            <tr>
-                                <td class="bg-light">MSFT return p.a.:</td>
-                                <td>29.27%</td>
-                            </tr>
-                            <tr>
-                                <td class="bg-light">SPY return:</td>
-                                <td>334.85%</td>
-                            </tr>
-                            <tr>
-                                <td class="bg-light">SPY return p.a.:</td>
-                                <td>16.74%</td>
-                            </tr>
-                            
-                        </table>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- About 1-->
+                            <div class="card mb-4">
+                                <div class="card-body p-3">
+                                    <div class="d-flex">
+                                        <div class="ms-1">
+                                           You will start the Tail Watching newsletter in your inbox. Stay tuned!
+                                            <br><br>
+
+                                            In the meantime, check out our past articles:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                     </div>
-                    
-                    <!--------------------- End of backtest table ----------------->
-                    
-                    <div class="px-1">
-                        Note: Modelled returns exclude dividend gains, spread and txn. costs. Past performance is no guarantee of future results.
-                        Read the full disclaimer <a href="" data-bs-toggle="modal" data-bs-target="#disclaimer_modal">here</a>.
-                    </div>
-                            
-                   
-                
-                    </div>
-                
-                    <br>
-    
+                </div>
+            </div>
+        </section>
         
-     <!-- Footer-->
+        
+        <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container px-4">
                 <p class="m-0 text-center text-white">
                     Sitemap:
-                    <a href="../#about" style="color: #FFFFFF; text-decoration:none">About</a> |    
+                    <a href="#about" style="color: #FFFFFF; text-decoration:none">About</a> |    
                     <a href="" data-bs-toggle="modal" data-bs-target="#pp_modal" style="color: #FFFFFF; text-decoration:none">Privacy Policy</a> |
                     <a href="" data-bs-toggle="modal" data-bs-target="#disclaimer_modal" style="color: #FFFFFF; text-decoration:none">Disclaimer</a> 
                     
@@ -408,6 +287,7 @@
             </div>
             <div class="container px-4"><p class="m-0 text-center text-white">&copy; 2024 Tail Watching - By William Chung. All rights reserved.</p></div>
         </footer>
+            
         <!-- Bootstrap core JS-->
         <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script-->
         <!-- Core theme JS-->
