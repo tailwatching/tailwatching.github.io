@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tail watching - Invest like a pro</title>
+        <meta name="description" content="Your guide to systematic investing. Join thousands of Tail Watchers catching the next big move." />
+        <meta property="og:site_name" content="Tail Watching" />
+        <meta property="og:title" content="Tail Watching" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Your guide to systematic investing. Join thousands of Tail Watchers catching the next big move." />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:url" content="www.tailwatching.com" />
+        <link rel="canonical" href="www.tailwatching.com" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+          <script src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
+          <script src="https://cdn.datatables.net/fixedcolumns/5.0.0/js/dataTables.fixedColumns.js"></script>
+
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap5.css">
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/5.0.0/css/fixedColumns.bootstrap4.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            .table.dataTable thead tr { 
+              background-color: #dce2e3 !important;
+            }
+            .page-item.active .page-link {
+              background-color: #dce2e3 !important;
+            }
+            .page-link {
+              color: black !important;
+            }
+            .table thead th {
+              background-color: #dce2e3 !important;
+            }
+        
+            thead {
+             position: absolute !important;
+             top: -9999px !important;
+             left: -9999px !important;
+            }
+          </style>
+        
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTDNC94TT9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GTDNC94TT9');
+    </script>
+
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-4">
+                <a class="navbar-brand"><img src= "assets/favicon-32x32.png"></a> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="demo_dashboard.html">Demo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#backtests">Backtests</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="text-center my-5">
+                            <h1 class="display-4 fw-bolder text-white mb-2">Tail Watching</h1>
+                            <p class="lead text-white mb-4">Your guide to systematic investing. <br>Join thousands of Tail Watchers catching the next big move.</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center text-align: center">
+                                
+                                <!--<a class="btn btn-light btn-lg px-4 me-sm-3" href="#membership">Sign up</a>-->
+                                <p align="center"><iframe src="https://embeds.beehiiv.com/9e7a254f-d691-48e3-8845-9b666396c9f5?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe></p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Features section-->
+        <section class="py-5 border-bottom" id="features">
+            <div class="container px-4 my-3">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="feature bg-dark bg-gradient text-white rounded-3 mb-3"><i class="bi bi-speedometer"></i></div>
+                        <h2 class="h4 fw-bolder">Live signals</h2>
+                        <p>Access a live database of > 700 assets, providing you with data-backed, actionable insights into fat tails and ongoing opportunities.</p>
+                        <!--
+                        <a class="text-decoration-none" href="#!">
+                            Call to action
+                            <i class="bi bi-arrow-right"></i>
+                        </a>-->
+                        
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-dark text-white rounded-3 mb-3"><i class="bi bi-bar-chart-fill"></i></div>
+                        <h2 class="h4 fw-bolder">Investing insights</h2>
+                        <p>Discover systematic portfolios, strategies, in-depth case studies, back-test results, and mistakes to avoid. These insights are delivered straight to your inbox.</p>
+                        
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature bg-primary bg-dark text-white rounded-3 mb-3"><i class="bi bi-newspaper"></i></div>
+                        <h2 class="h4 fw-bolder">Updates on key events</h2>
+                        <p>Receive timely updates on key market events such as monetary policy changes, regulatory shifts and other market updates.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Membership section-->
+        <section id="membership" class="bg-light py-5 border-bottom">
+            <div class="container px-4 my-3">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Join the club</h2>
+                </div>
+                
+                
+                <div class="row gx-5 justify-content-center">
+                    
+                    <!-- Free newsletter -->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5">
+                                <div class="small text-uppercase fw-bold text-muted">
+                                    Free newsletter
+                                </div>
+                                <div class="mb-3">
+                                    <span class="display-4 fw-bold">$0</span>
+                                    <span class="text-muted">/ mo.</span>
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Systematic investing insights
+                                    </li>
+                                    
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Case studies
+                                    </li>
+
+                                </ul>
+                                <!--<div class="d-grid"><a class="btn btn-outline-primary" href="https://tailwatching.lemonsqueezy.com/checkout/buy/52e3648b-b605-4fd7-95da-755fc402e793">Sign up</a></div>-->
+                                
+                                <iframe src="https://embeds.beehiiv.com/265c561e-0608-44d4-ac2f-1393bee3b95d?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
+                                
+                                    
+                                </div>
+                                     
+                                
+                            </div>
+                        </div>
+                    
+                    <!-- Membership card pro-->
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card mb-5 mb-xl-0">
+                            <div class="card-body p-5 bg-lig">
+                                <div class="small text-uppercase fw-bold">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    The Tail Watcher
+                                </div>
+                                <div class="mb-3">
+                                    <!--span class="display-4 fw-bold">$</span>
+                                    <span class="text-muted">/ mo.</span-->
+                                </div>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Live signals (> 700 assets)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Unique dashboard instance
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Dedicated support
+                                    </li>
+                                    
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Member-only newsletter
+                                    </li>
+                                    
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Strategies, back-test results
+                                    </li>
+                                    
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Systematic portfolios
+                                    </li>
+                                    
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Key market event updates
+                                    </li>
+                                    
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Systematic investing insights
+                                    </li>
+                                    
+                                    <li class="mb-2">
+                                        <i class="bi bi-check text-primary"></i>
+                                        Case studies
+                                    </li>
+
+                                </ul>
+                                <!--<div class="d-grid"><a class="btn btn-dark" href="https://tailwatching.lemonsqueezy.com/checkout/buy/93f6be22-4189-488a-a086-fae85b4a951f">Sign up</a></div>-->
+                                <b>Coming soon!</b>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- About section-->
+        <section id="about" class="py-5 border-bottom">
+            <div class="container px-4 my-3">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">About</h2>
+                </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- About 1-->
+                            <div class="card mb-4">
+                                <div class="card-body p-3">
+                                    <div class="d-flex">
+                                        <div class="ms-1">
+                                            <div class="text-center">
+                                            <img src="assets/profile_photo.jpeg" class="w-50 rounded" alt="Responsive image">
+                                            </div>
+                                            <br>
+                                            <p class="mb-1">Hi friend! <br><br>My name is William. I'm a systematic investor and algorithmic trader. I work with hedge funds, family offices and institutional traders to design, develop and deploy systematic strategies.</p>
+                                            
+                                            <hr>
+                                            
+                                            <p class="text-center"><b>Why I created TailWatching.com</b></p>
+                                            
+                                            <p>For a long time, systematic investing has been the exclusive domain of Wall Street whales. Hedge funds, armed with vast resources, employ teams of data scientists, analysts and PhDs to unlock alpha - The edge that generates consistent market outperformance. This leaves retail investors at a disadvantage, unable to access the sophisticated tools and insights needed to compete.
+                                            </p>
+                                            
+                                            <p>I want to change that.</p>
+                                        
+                                            <p>
+                                            My mission is to <b>democratize systematic investing</b> for retail investors, making institutional strategies available to you. I believe that everyone, regardless of capital or expertise, deserves the opportunity to leverage the power of systematic investing. Through TailWatching.com, I aim to empower you with the right tools to build your own systematic investing portfolio.
+                                            </p>
+
+                                            <hr>
+                                            
+                                            <p class="text-center"><b>How does the Tail Watching model work?</b></p>
+                                            
+                                            <div class="text-center">
+                                            <img src="assets/distribution_curve.jpg" class="w-100 rounded" alt="Responsive image">
+                                            </div>
+                                            <br>
+                                            
+                                            <p>
+                                            <b>Tail Watching</b> is a long-only, trend following model (i.e. Buy positions in trending assets).
+                                            </p>
+                                            
+                                            <p>
+                                            Traditional portfolio strategies follow the idea that asset prices follow a normal distribution. However, the existence of fat tails suggests that asset returns are not normally distributed, but skewed.</p>
+                                            
+                                            <p>
+                                            The fat tails indicate that there is a probability (often larger than anticipated), that prices will move beyond 3 standard deviations. The Tail Watching model capitalizes on these tails in trending liquid markets to generate outsized returns.
+                                            </p>
+                                            
+                                            <p>
+                                                <b>Investment philosophy of Tail Watching:</b>
+                                            </p>
+                                            
+                                            <div class="container">
+                                                
+                                                <div class="row">
+                                                    <div class="row gx-1">
+                                                        <div class="col my-1 mx-1">
+                                                            <div class="text-center p-3 border bg-dark h-100 rounded" style="--bs-bg-opacity: .1;">Don't predict, just ride the trend for as long as you can</div>
+                                                          </div>
+                                                        <div class="col my-1 mx-1">
+                                                            <div class="text-center p-3 border bg-dark h-100 rounded" style="--bs-bg-opacity: .1;"><b></b>Cut your losers short, let your winners run</div>
+                                                          </div>
+                                                          <div class="col my-1 mx-1">
+                                                            <div class="text-center p-3 border bg-dark h-100 rounded" style="--bs-bg-opacity: .1;">Diversify by asset class, industry & geography</div>
+                                                          </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            <hr>
+                                           
+                                            <p class="text-center"><b>What is the Tail Watching dashboard?</b></p>
+                                            <p>
+                                            
+                                            The Tail Watching dashboard provides <b>live alerts</b> for you to build a long-only, trend following portfolio. Each asset in the dashboard has been put through the Tail Watching model to estimate its profitability over time. An average of 10-20 years of live data was used for each asset, creating live signals backed by decades of positive expectancy. The dashboard is a culmination thousands of research & modelling hours packed into a table of actionable insights for you.
+                                            
+                                            </p>
+
+                                            <p>The dashboard can serve the following purposes:</p>
+                                                <ul>
+                                                    <li><strong>Tail watching</strong>: Spot fat tails that are often missed by retail investors, and capitalize on potential upside</li>
+                                                    <li><strong>Trend filtering</strong>: Identify the latest trending stocks across multiple exchanges in a snapshot</li>
+                                                    <li><strong>Market heatmap</strong>: Feel the pulse of the market across various asset classes, geographies and industries</li>
+                                                    <li><strong>Entry signals</strong>: Use the signals as standalone or complimentary data points to build your portfolio</li>
+                                                </ul>
+
+                                                <p>
+                                                You can find a demo <a href="demo_dashboard.html" style="color: blue">here</a>.
+                                                </p>
+                                            <hr>
+
+                                            <p class="text-center">Ready to take control of your financial future?</p>
+                                            <p class="text-center"><b><h4 class="text-center">Get started today.</h4></b></p>
+
+                                            <div class ="text-center py-2"><a class="btn btn-dark" href="#membership">Sign up now</a></div>
+                                            <br>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ section-->
+        <section id="faq" class="bg-light py-5 border-bottom">
+            <div class="container px-4 my-3">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">FAQs</h2>
+                </div>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        1. What happens after I make payment?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Our newsletters and updates would be delivered to the same email address that you signed up with.<br><br>
+                        If you signed up for "The Tail Watcher" membership, here is what to expect:<br><br>
+                          
+                        <strong><u>(1) Receive your license key via email</u></strong><br>
+                        You will receive a license key in your email inbox. This license key serves as the password for your dashboard. The license key is designed to be long. Drop me an email if you would like to change the key to a shorter one.<br><br>
+                          
+                        <strong><u>(2) Receive a unique link to your dashboard via email</u></strong><br>
+                        In 3 - 5 business days, a dedicated instance of the dashboard would be created for you. Once it is ready, you would receive a unique link via email.
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2. What is the Tail Watching dashboard?
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>The Tail Watching dashboard provides <b>live alerts</b> for you to build a long-only, trend following portfolio. Each asset in the dashboard has been put through the Tail Watching model to estimate its profitability over time. An average of 10-20 years of live data was used for each asset, creating live signals backed by decades of positive expectancy. The dashboard is a culmination thousands of research & modelling hours packed into a table of actionable insights for you.
+                        </p>
+                        
+                        <p>The dashboard can serve the following purposes:</p>
+                        <ul>
+                            <li><strong>Tail watching</strong>: Spot fat tails that are often missed by retail investors, and capitalize on potential upside</li>
+                            <li><strong>Trend filtering</strong>: Identify the latest trending stocks across multiple exchanges in a snapshot</li>
+                            <li><strong>Market heatmap</strong>: Feel the pulse of the market across various asset classes, geographies and industries</li>
+                            <li><strong>Entry signals</strong>: Use the signals as standalone or complimentary data points to build your portfolio</li>
+                        </ul>
+                        
+                        <p>
+                        You can find a demo <a href="demo_dashboard.html" style="color: blue">here</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. How often does the Tail Watching dashboard update?
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        The dashboard updates every time you visit the page. You can also manually refresh the table using the controls in the dashboard.
+                      </div>
+                    </div>
+                  </div>
+                 <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        4. How many markets do you cover?
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        The stock exchanges included are: NYSE, NASDAQ, LON, HKSE.<br>
+                      </div>
+                    </div>
+                  </div>
+                 <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        5. Do you have a demo of the Tail Watching dashboard?
+                      </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        A demo can be found <a href="demo_dashboard.html" target="_blank" style="color: blue">here</a>.<br>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact section-->
+        <section id="contact" class="py-5 border-bottom">
+            <div class="container px-4 my-3">
+                <div class="text-center mb-5">
+                    <div class="feature bg-primary bg-dark text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                    <h2 class="fw-bolder">Get in touch</h2>
+                    <p class="lead mb-0">We'd love to hear from you</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                                
+                                <form action="https://api.web3forms.com/submit" method="POST">
+
+                                    <input type="hidden" name="access_key" value="5b300ccf-db24-41da-a133-de5d2499403d">
+                                    <input type="hidden" name="subject" value="New submission from Tailwatching website">
+                                    
+                                    <div class="fields form-floating mb-3">
+										<div class="field half fields form-floating">
+											<input class="form-control" type="text" name="name" id="name" required/>
+                                            <label for="name">Full name</label>
+										</div><br>
+										<div class="field half fields form-floating">
+											<input class="form-control" type="text" name="email" id="email" required/>
+                                            <label for="email">Email address</label>
+										</div><br>
+										<div class="field fields form-floating mb-3">
+											<textarea class="form-control" name="message" id="message" rows="4" style="height: 10rem" required></textarea>
+                                            <label for="message">Message</label>
+										</div>
+									</div>
+                                    <div class="d-grid"><input type="submit" value="Send Message" class="btn btn-dark btn-lg" /></div>
+
+                                </form>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+        <!-- Backtests section-->
+        <section id="backtests" class="bg-light py-5 border-bottom">
+            <div class="container px-4 my-3">
+                <div class="mb-5">
+                    <h2 class="text-center fw-bolder">Tail Watching Backtests</h2>
+                    <div class="row">
+                        
+                        <style>
+
+                            .card tbody tr {
+                                float: left;
+                                width: 20em;
+                                margin: 0.5em;
+                                border-radius: 0.5em;
+                                background-color: white !important;
+                                box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.25);
+                            }
+                            .card tbody tr td {
+                                display: block;
+                                border: 0;
+                            }
+                            
+                        </style>
+                        <table id="backtest-search-table" class="table bg-transparent table-hover border-0 table-responsive" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Header 1</th>
+                                    <th>Header 2/th>
+                                </tr>
+                            </thead>
+                            
+                                <tr class='clickable-row' data-href='../performance/msft.html'>
+                                    <td><b>MSFT: Microsoft Corp</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr class='clickable-row' data-href='../performance/aapl.html'>
+                                    <td><b>AAPL: Apple Inc</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr>
+                                    <td><b>NVDA: NVIDIA Corp</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr>
+                                    <td><b>AMZN: Amazon.com Inc</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr>
+                                    <td><b>GOOGL: Alphabet Inc Class A</b></td>
+                                    <td>NASDAQ</td>
+                                </tr>
+                                <tr>
+                                    <td><b>BRK.B: Berkshire Hathaway Inc Class B</b></td>
+                                    <td>NYSE</td>
+                                </tr>
+                                <tr>
+                                    <td><b>LLY: Eli Lilly And Co</b></td>
+                                    <td>NYSE</td>
+                                </tr>
+                            
+                        </table>
+                        
+                        <script>
+                            $(document).ready(function () {
+                                //Only needed for the filename of export files.
+                                //Normally set in the title tag of your page.
+                               
+                                // DataTable initialisation
+                                $("#backtest-search-table").DataTable({
+                                    dom: '<"dt-buttons"Bf><"clear">lirtp',
+                                    paging: true,
+                                    autoWidth: true,
+                                    lengthChange: false,
+                                    info: false,
+                                    buttons: [
+                                        "colvis",
+                                        "copyHtml5",
+                                        "csvHtml5",
+                                        "excelHtml5",
+                                        "pdfHtml5",
+                                        "print"
+                                    ],
+                                    initComplete: function (settings, json) {
+                                        $("#backtest-search-table").toggleClass("card");
+                                        $("#cv").on("click", function () {
+                                            if ($("#backtest-search-table").hasClass("card")) {
+                                                $(".colHeader").remove();
+                                            } 
+                                        });
+                                    }
+                                });
+
+                                $(".clickable-row").click(function() {
+                                    window.location = $(this).data("href");
+                                });
+
+                            });
+                        
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4">
+                <p class="m-0 text-center text-white">
+                    Sitemap:
+                    <a href="#about" style="color: #FFFFFF; text-decoration:none">About</a> |    
+                    <a href="" data-bs-toggle="modal" data-bs-target="#pp_modal" style="color: #FFFFFF; text-decoration:none">Privacy Policy</a> |
+                    <a href="" data-bs-toggle="modal" data-bs-target="#disclaimer_modal" style="color: #FFFFFF; text-decoration:none">Disclaimer</a> 
+                    
+                </p>
+                    <!-------------------------------- Disclaimer modal ---------------------------->
+                    <div class="container-fluid">
+                        <div class="modal fade" id="disclaimer_modal" tabindex="-1" role="dialog" aria-labelledby="disclaimer_modal" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="disclaimer_modal">Disclaimer</h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p>
+                                    This is neither a recommendation to purchase or sell any of the shares, securities or other instruments mentioned in this document or referred to; nor can this document be treated as professional advice to buy, sell or take a position in any shares, securities or other instruments. The information contained herein is based on the study and research of William Chung (“the Authors”); and are merely the written opinions and ideas of the Authors, and is as such strictly for educational purposes and/or for study or research only.
+                                </p>
+                                <p>
+                                    This information should not and cannot be construed as or relied on and (for all intents and purposes) does not constitute financial, investment or any other form of advice. Any investment involves the taking of substantial risks, including (but not limited to) complete loss of capital. Every investor has different strategies, risk tolerances and time frames. You are advised to perform your own independent checks, research or study; and you should contact a licensed professional before making any investment decisions.  
+                                </p>
+                                <p>
+                                    The Authors make it unequivocally clear that there are no warranties, express or implied, as to the accuracy, completeness, or results obtained from any statement, information and/or data set forth herein. The Authors, its related and affiliate companies and/or their directors, executives and employees shall in no event be held liable to any party for any direct, indirect, punitive, special, incidental, or consequential damages arising directly or indirectly from the use of any of this material.  
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                
+                <!-------------------------------- Privacy Policy modal ---------------------------->
+                    <div class="container-fluid">
+                        <div class="modal fade model-lg" id="pp_modal" tabindex="-1" role="dialog" aria-labelledby="pp_modal" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="pp_modal">Disclaimer</h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p>
+                                    TailWatching.com is serious about protecting your online privacy. This Privacy Statement explains our views and practices concerning privacy, and how they may pertain to you as a user of our website.
+                                </p>
+                                <p>
+                                    “You” or “Your” means you as a participant in or as a user of the TailWatching.com website. “We” or “Our” or “Us” means TailWatching.com. “Our site” means TailWatching.com
+                                </p>
+                                <p>
+                                    All information transmitted, printed or otherwise submitted to TailWatching.com via this website shall be deemed to be the property of TailWatching.com and TailWatching.com shall be free to use such information for any lawful purpose as detailed herein.
+                                </p>
+                                <p>
+                                    This site contains links to other sites and we are not responsible for the privacy practices or the content of such sites.
+                                </p>
+                                <p>
+                                    We reserve the right to release such information to law enforcement or other governmental officials as we, in our sole and absolute discretion, deem necessary to comply with the law.
+                                </p>
+                                <p>
+                                  <b>Section 1: Collected Information</b><br>
+                                </p>
+                                    We automatically collect and/or track the following:<br><br>
+                                    <ul>
+                                    1. Information knowingly provided by you through on-line forms, registration forms, surveys, and/or other entries, such as email addresses, personal, financial or demographic information;
+                                    <br>
+                                    2. Information, user specific or aggregate, on what pages our visitors access; and
+                                    <br>
+                                    3. E-mail addresses of visitors that communicate with TailWatching.com via e-mail.
+                                    </ul>
+                                
+                                  <p>
+                                      <b>Section 2: Use of Data Collected</b><br>
+                                  </p>
+                                    
+                                  <p>We use your personal, demographic and profile data to enhance your experience at our site and to enable us to present content we think you might be interested in. We use your contact information to send you information about our company and promotional material from our partners. We may also use your personal, demographic and profile data to improve our site, for statistical analysis, for marketing and promotional purposes, and for editorial or feedback purposes for our advertisers. Information collected by us may be added to our databases and used for future telemarketing, SMS text-messaging, e-mails or postal mailings regarding site updates, new products and services, upcoming events, and/or status of orders placed online. By using this site, you agree that you may be contacted in any manner contemplated in this section even if your number is found on a do not call registry, in-house list or similar registry.
+                                  </p>
+                                  
+                                  <p>
+                                      <b>Section 3: Disclosure of Data to Third Parties</b><br>
+                                  </p>
+                                  <p>If you choose to provide personal information, it will be used for the following purposes:</p>
+                                  
+                                    <ul>
+                                        1. Considering you for a TailWatching.com product;
+                                        <br>
+                                        2. As required by law; and
+                                        <br>
+                                        3. For marketing products and services which we determine, in our sole judgment, that you might find of interest. We reserve the right to share, rent, sell, or otherwise disclose data we collect to third parties. Any third party we share, rent, sell, or otherwise disclose data to will be prescreened by us, determined by us to be reputable, and will use the personal data for marketing products and services which we determine, in our sole judgment, that you might find of interest.
+                                    </ul>
+                                  <p>
+                                    <b>Section 4: Your Opt-Out Rights</b><br>
+                                  </p>
+                                
+                                  <p> 
+                                      You may opt-out of receiving communications from us and/or our partners by not submitting your information. We also allow you to remove your information from our marketing lists. If you remove your information from our marketing lists it will no longer be used by us to send promotional correspondence to you. You can remove your information from our marketing lists by clicking on the “Unsubscribe” link at the bottom of every email we send you, or by sending your request, in writing, via email to: infoATtailwatchingDOTcom (Please replace “AT” with @ and “DOT” with .)
+                                  </p>
+                                  <p><b>Section 5: We Do Not Intend to Collect Data from Children</b></p>
+                                  <p>
+                                    The information and services provided to us or our affiliates, sponsors, and advertisers are not intended to be viewed by children (under 18 years old). No information collected from children is knowingly used for any marketing or promotional purposes whatsoever, either inside or outside TailWatching.com. No part of TailWatching.com’s web site is structured to attract anyone under the age of 18.
+                                  </p>
+                                  <p><b>Section 6: Our Right to Contact You</b></p>
+                                  <p>
+                                    We reserve the right to contact you regarding your account status and changes to subscriber agreements, privacy policy, or any other policies or agreements relevant to you.
+                                  </p>
+                                  <p><b>Section 7: Our Right to Change</b></p>
+                                  <p>
+                                    We reserve the right to change this policy at any time by notifying you of the existence and location of the new or revised privacy policy or by posting the changes online at our site.
+                                  </p>
+                                  <p><b>Section 8: Our Contact Information</b></p>
+                                  <p>
+                                    If you have any questions about this privacy statement, the practices of this site, or your dealings with this website, you can contact us via email sent to: infoATtailwatchingDOTcom (Please replace “AT” with @ and “DOT” with .)
+                                  </p>
+                                  <p><b>Section 9: Anti Spam Policy. Can-Spam Act Compliance</b></p>
+                                  <p>
+                                    TailWatching.com is dedicated to ensuring compliance with the ‘Can-Spam Act’, which took effect January 1, 2004. You may receive email from TailWatching.com in the following circumstances:
+                                  </p>
+                                  <ul>
+                                        1. Acknowledging your application has been received and requesting additional action
+                                        <br>
+                                        2. Requests for additional information to support your current application
+                                        <br>
+                                        3. Response to your inquiries regarding the status of your transactional requests
+                                        <br>
+                                        4. Thanking you for your valued business
+                                        <br>
+                                        5. Advertisements for our products, services, changes in services, new product availability
+                                        <br>
+                                        6. Advertisements for third party products and services where we have determined that such product or service may be of interest to our customers
+                                    </ul>
+                                  <p>To ensure compliance with the Can-Spam Act, TailWatching.com has implemented the following guidelines for email delivery:</p>
+                                  <ul>
+                                        1. All emails sent to you by TailWatching.com will clearly identify TailWatching.com as the sender. FROM / SENDER: someone@TailWatching.com (NOTE: The actual sender will alter from department to department, but all from addresses will end with @TailWatching.com).
+                                        <br>
+                                        2. The Subject Line of any email you receive will always accurately describe the subject matter of the email.
+                                        <br>
+                                        3. Any email from TailWatching.com will include the ability to unsubscribe from future email messages.
+                                        <br>
+                                        4. Unsubscribing will ensure the customer is removed from ALL lists at TailWatching.com; this excludes customer service emails regarding the processing and status of a current product.
+                                        <br>
+                                        5. All emails sent to you directly by TailWatching.com include valid postal address information in the footer.
+                                        <br>
+                                        6. All third party marketing partners are required to comply with the Can-Spam Act.
+                                        <br>
+                                        7. Emails sent to you directly by TailWatching.com will include an email address and physical address where you can send suggestions, complaints or other correspondence.
+                                    </ul>
+                                    <p><b>Section 10: Information for ISPs</b></p>
+                                    <p>Website: TailWatching.com<br>Email Address: infoATtailwatchingDOTcom<br>(Please replace “AT” with @ and “DOT” with .)</p>
+                                    <p>TailWatching.com understands consumers’ concerns over the use of their personal information. We hope this information will relieve any concerns your company may have regarding our email policies. TailWatching.com and its affiliated sites use only an “opt-in or opt out” method of obtaining customer information, and it is not our policy or desire to send unsolicited email. We obtain email addresses and personal information from third parties that follow the same set of policies. TailWatching.com email messages sent always include information about the origin of the emails and instructions on how recipients can unsubscribe from receiving future email messages.
+                                    </p>
+                                  <p>From time to time, TailWatching.com will enter into an arrangement with a third party website to allow individuals to opt into our marketing program on those third party websites. In each case the third party websites have represented and warranted to us, among other things,</p>
+                                  <ul>
+                                        1. That the data was collected voluntarily from individuals on website registrations and co-registrations,
+                                        <br>
+                                        2. That the sellers have a right, under any applicable privacy statements, to transfer the data to us, and
+                                        <br>
+                                        3. That TailWatching.com has the right to send marketing offers to the individuals.
+                                </ul>
+                                  <p>We hope this information satisfies any questions or concerns you may have regarding the email practices of TailWatching.com. If you have additional questions or wish to discuss this matter further, please contact us at: infoATtailwatchingDOTcom (Please replace “AT” with @ and “DOT” with .)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+               
+               
+            </div>
+            <div class="container px-4"><p class="m-0 text-center text-white">&copy; 2024 Tail Watching - By William Chung. All rights reserved.</p></div>
+        </footer>
+            
+        <!-- Bootstrap core JS-->
+        <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script-->
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
