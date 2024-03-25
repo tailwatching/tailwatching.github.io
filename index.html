@@ -207,7 +207,7 @@
                                 <!-- Waitlist form -->
                                 <form id="signupForm1" method="post">
                                     <div class="input-group mb-3">
-                                        <input type="email" name="email1" id="email1" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                                        <input type="email" name="email1" id="email1" class="form-control" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                                         <div class="input-group-append">
                                             <button class="btn btn-primary btn-lg" type="submit">I'm in!</button>
                                         </div>
@@ -364,73 +364,9 @@
                                                 The dashboard is available via <b>The Tail Watcher</b> membership. <br>
                                             
                                                 </p>
-                                            
-                                                <p><strong>Join the waitlist: </strong></p>
                                                 
-                                                <!-- Waitlist form -->
-                                            <div class="col-lg-6 col-xl-4">
-                                                <form id="signupForm2" method="post">
-                                                    <div class="input-group mb-3">
-                                                        <input type="email" name="email2" id="email2" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-primary" type="submit">I'm in!</button>
-                                                        </div>
-
-                                                    </div>
-                                                    <div id="loader2" style="display:none">Submitting...</div>
-                                                </form>
-                                            </div>
-
-                                            <script>
-                                                let form = document.getElementById('signupForm2')
-                                                let loadingMessage = document.getElementById('loader2')
-                                                let formUrl = 'https://tailwatching.lemonsqueezy.com/email-subscribe/external' // Change "my-store" to your store slug
-                                                let redirectUrl = '../waitlist-success.html' // Use your own URL here
-
-                                                form.addEventListener('submit', async (e) => {
-                                                  e.preventDefault()
-
-                                                  showLoading()
-
-                                                  try {
-                                                    let response = await fetch(formUrl, {
-                                                      method: 'POST',
-                                                      body: new FormData(e.target),
-                                                    });
-
-                                                    hideLoading()
-
-                                                    if (response.ok) {
-                                                      // Redirect the subscriber
-                                                      window.location = redirectUrl
-                                                    } else {
-                                                      // Something went wrong subscribing the user
-                                                      alert('Sorry, we couldn\'t subscribe you.')
-                                                    }
-
-                                                  } catch (error) {
-                                                    hideLoading()
-                                                    alert('Sorry, there was an issue: ' + error)
-                                                  }
-                                                })
-
-                                                let showLoading = () => {
-                                                  form.querySelector('button').setAttribute('disabled', 'disabled')
-                                                  loadingMessage.style.display = 'block'
-                                                }
-                                                let hideLoading = () => {
-                                                  form.querySelector('button').removeAttribute('disabled')
-                                                  loadingMessage.style.display = 'none'
-                                                }
-                                                </script>
-                                            <!--hr>
-
-                                            <p class="text-center">Ready to take control of your financial future?</p>
-                                            <p class="text-center"><b><h4 class="text-center">Get started today.</h4></b></p>
-
-                                            <div class ="text-center py-2"><a class="btn btn-dark" href="#membership">Sign up now</a></div>
-                                            <br-->
-                                            
+                                                <a class="btn btn-primary" href="#membership">Join the waitlist</a>
+                                                
                                         </div>
                                     </div>
                                 </div>
