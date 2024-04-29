@@ -139,9 +139,8 @@
             <div class="container px-4 my-3">
                 <div class="text-center mb-5">
                     <h2 class="fw-bolder">Membership</h2>
-                    <p class="lead mb-0">Coming soon</p>
+                    <p class="lead mb-0">We are live!</p>
                 </div>
-                
                 
                 <div class="row gx-5 justify-content-center">
                     
@@ -154,8 +153,11 @@
                                     The Tail Watcher
                                 </div>
                                 <div class="mb-3">
-                                    <!--span class="display-4 fw-bold">$</span>
-                                    <span class="text-muted">/ mo.</span-->
+                                    <span class="display-4 fw-bold">$39</span>
+                                    <span class="text-muted">/ mo.</span>
+                                </div>
+                                <div class="mb-3">
+                                    <span class="text-muted">1 yr membership, billed at $468 / yr</span>
                                 </div>
                                 <ul class="list-unstyled mb-4">
                                     <li class="mb-2">
@@ -202,63 +204,10 @@
                                     </li>
 
                                 </ul>
-                            
-                               <h5 class="text-center">Join the waitlist:</h5>
-                                
-                                <!-- Waitlist form -->
-                                <form id="signupForm" method="post">
-                                    <div class="input-group mb-3">
-                                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter email" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary btn-lg" type="submit">I'm in!</button>
-                                        </div>
-                                        
-                                    </div>
-                                    <div id="loader" style="display:none">Submitting...</div>
-                                </form>
-
-                                <script>
-                                    let form = document.getElementById('signupForm')
-                                    let loadingMessage = document.getElementById('loader')
-                                    let formUrl = 'https://tailwatching.lemonsqueezy.com/email-subscribe/external' // Change "my-store" to your store slug
-                                    let redirectUrl = '../waitlist-success.html' // Use your own URL here
-
-                                    form.addEventListener('submit', async (e) => {
-                                      e.preventDefault()
-
-                                      showLoading()
-
-                                      try {
-                                        let response = await fetch(formUrl, {
-                                          method: 'POST',
-                                          body: new FormData(e.target),
-                                        });
-
-                                        hideLoading()
-
-                                        if (response.ok) {
-                                          // Redirect the subscriber
-                                          window.location = redirectUrl
-                                        } else {
-                                          // Something went wrong subscribing the user
-                                          alert('Sorry, we couldn\'t subscribe you.')
-                                        }
-
-                                      } catch (error) {
-                                        hideLoading()
-                                        alert('Sorry, there was an issue: ' + error)
-                                      }
-                                    })
-
-                                    let showLoading = () => {
-                                      form.querySelector('button').setAttribute('disabled', 'disabled')
-                                      loadingMessage.style.display = 'block'
-                                    }
-                                    let hideLoading = () => {
-                                      form.querySelector('button').removeAttribute('disabled')
-                                      loadingMessage.style.display = 'none'
-                                    }
-                                    </script>
+                        
+                                <div class="input-group mb-3">
+                                    <a href="https://tailwatching.lemonsqueezy.com/buy/5c05f6fb-2f6e-4173-b295-bef34e6cc986" class="btn btn-primary btn-lg" style="width:100%" type="submit">Sign me up!</a>
+                                </div>
 
                             </div>
                         </div>
@@ -388,7 +337,7 @@
                                             
                                                 </p>
                                                 
-                                                <a class="btn btn-primary" href="#membership">Join the waitlist</a>
+                                                <a href="https://tailwatching.lemonsqueezy.com/buy/5c05f6fb-2f6e-4173-b295-bef34e6cc986" class="btn btn-primary btn-lg" type="submit">Sign me up!</a>
                                                 
                                         </div>
                                     </div>
@@ -427,7 +376,8 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
-                        <p>The Tail Watching dashboard provides <b>live alerts</b> for you to build a long-only, trend following portfolio. Each asset in the dashboard has been put through the Tail Watching model to estimate its profitability over time. An average of 10-20 years of live data was used for each asset, creating live signals backed by decades of positive expectancy. The dashboard is a culmination thousands of research & modelling hours packed into a table of actionable insights for you.
+                        <p>The Tail Watching dashboard is a member-only service. <br><br>
+                            It provides <b>live alerts</b> for you to build a long-only, trend following portfolio. Each asset in the dashboard has been put through the Tail Watching model to estimate its profitability over time. An average of 10-20 years of live data was used for each asset, creating live signals backed by decades of positive expectancy. The dashboard is a culmination thousands of research & modelling hours packed into a table of actionable insights for you.
                         </p>
                         
                         <p>The dashboard can serve the following purposes:</p>
@@ -442,10 +392,10 @@
                         You can find a demo <a href="demo_dashboard.html" style="color: blue">here</a>.
                         </p>
                         <p>
-                           The dashboard is available via <b>The Tail Watcher</b> membership. <br>
+                           The dashboard is available via <b>The Tail Watcher</b> membership. Join us today! <br>
                         </p>
 
-                          <a class="btn btn-primary" href="#membership">Join the waitlist</a>
+                          <a href="https://tailwatching.lemonsqueezy.com/buy/5c05f6fb-2f6e-4173-b295-bef34e6cc986" class="btn btn-primary btn-lg" type="submit">Sign me up!</a>
                                             
                       </div>
                     </div>
