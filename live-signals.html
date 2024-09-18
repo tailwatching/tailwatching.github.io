@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tail watching - Your guide to systematic investing</title>
+        <meta name="description" content="Your guide to systematic investing. Join thousands of Tail Watchers catching the next big move." />
+        <meta property="og:site_name" content="Tail Watching" />
+        <meta property="og:title" content="Tail Watching" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Your guide to systematic investing. Join thousands of Tail Watchers catching the next big move." />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:url" content="www.tailwatching.com" />
+        <link rel="canonical" href="www.tailwatching.com" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+          <script src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
+          <script src="https://cdn.datatables.net/fixedcolumns/5.0.0/js/dataTables.fixedColumns.js"></script>
+
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap5.css">
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/5.0.0/css/fixedColumns.bootstrap4.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <style>
+            .table.dataTable thead tr { 
+              background-color: #dce2e3 !important;
+            }
+            .page-item.active .page-link {
+              background-color: #dce2e3 !important;
+            }
+            .page-link {
+              color: black !important;
+            }
+            .table thead th {
+              background-color: #dce2e3 !important;
+            }
+
+          </style>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTDNC94TT9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GTDNC94TT9');
+    </script>
+        
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-4">
+                <a class="navbar-brand" href="../index.html"><img src= "../assets/favicon-32x32.png"></a> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.newsletter.tailwatching.com/">Newsletter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#membership">Membership</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+                        <!--li class="nav-item"><a class="nav-link" href="../index.htmldemo_dashboard.html">Demo</a></li-->
+                        <!--li class="nav-item"><a class="nav-link" href="../index.html#backtests">Backtests</a></li-->
+                        <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Demo dashboard section-->
+        <!-- Header-->
+        <header class="bg-dark">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="text-center my-1">
+                            <h1 class="display-6 fw-bolder text-white mb-2">Tail Watching: Live alerts</h1>
+                            <br>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </header>
+
+            <div class="container container-md">
+                    <div class="row py-3">
+                        <h4 class="text-center">How to use the dashboard</h4>
+                    </div>
+                    <!------------ Instructions on legend ------------->
+                    <div class="row px-3">
+                        <table id="instructions-table" class="table table-hover display nowrap table-sm table-responsive">
+                            <thead>
+                                <th>Category</th>
+                                <th>Description</th>
+                            </thead>
+                            <tr>
+                                <td class="bg-light">Ticker:</td>
+                                <td>A unique code used by the stock exchange to identify an asset</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">Signal:</td>
+                                <td>
+                                    <li><b>"Buy": </b>The asset is trending - you can consider a long position</li>
+                                    <li><b>"Hold": </b>If you are already in a long position, this is a good time to hold & do nothing</li>
+                                    <li><b>"Exit buy": </b>The asset has stopped trending, you can consider closing your long position</li>
+                              
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">Name:</td>
+                                <td>The name of the company or asset</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">Exchange:</td>
+                                <td>The stock exchange where the asset is listed on</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">Avg. return p.a.:</td>
+                                <td>Annualized historical return based on the Tail Watching model, excluding dividends, spread and txn. costs</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">Price:</td>
+                                <td>Current asset price in local currency</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">Market cap:</td>
+                                <td>Total value of the company's shares of stock in local currency (No. of shares outstanding shares x share price)</td>
+                            </tr>
+                            <tr>
+                                <td class="bg-light">Daily vol:</td>
+                                <td>Daily trading volume</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        <iframe class="responsive-iframe container container-fluid" width="100%" height="700px" src="https://script.google.com/macros/s/AKfycbxB6_kExhv-yvtupE7ni7AiS7XPGq3k56YAQtCQ3nbdvqAFMURqhPNXkdU28h1JkNU/exec"></iframe>
+                        
+                    </div>
+                    
+                    <!--------------------- End of instructions table ----------------->
+                </div>
+            <hr>
+   
+            <br>
+        
+     <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4">
+                <p class="m-0 text-center text-white">
+                    Sitemap:
+                    <a href="../#about" style="color: #FFFFFF; text-decoration:none">About</a> |    
+                    <a href="" data-bs-toggle="modal" data-bs-target="#pp_modal" style="color: #FFFFFF; text-decoration:none">Privacy Policy</a> |
+                    <a href="" data-bs-toggle="modal" data-bs-target="#disclaimer_modal" style="color: #FFFFFF; text-decoration:none">Disclaimer</a> 
+                    
+                </p>
+                    <!-------------------------------- Disclaimer modal ---------------------------->
+                    <div class="container-fluid">
+                        <div class="modal fade" id="disclaimer_modal" tabindex="-1" role="dialog" aria-labelledby="disclaimer_modal" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="disclaimer_modal">Disclaimer</h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p>
+                                    This is neither a recommendation to purchase or sell any of the shares, securities or other instruments mentioned in this document or referred to; nor can this document be treated as professional advice to buy, sell or take a position in any shares, securities or other instruments. The information contained herein is based on the study and research of William Chung (“the Authors”); and are merely the written opinions and ideas of the Authors, and is as such strictly for educational purposes and/or for study or research only.
+                                </p>
+                                <p>
+                                    This information should not and cannot be construed as or relied on and (for all intents and purposes) does not constitute financial, investment or any other form of advice. Any investment involves the taking of substantial risks, including (but not limited to) complete loss of capital. Every investor has different strategies, risk tolerances and time frames. You are advised to perform your own independent checks, research or study; and you should contact a licensed professional before making any investment decisions.  
+                                </p>
+                                <p>
+                                    The Authors make it unequivocally clear that there are no warranties, express or implied, as to the accuracy, completeness, or results obtained from any statement, information and/or data set forth herein. The Authors, its related and affiliate companies and/or their directors, executives and employees shall in no event be held liable to any party for any direct, indirect, punitive, special, incidental, or consequential damages arising directly or indirectly from the use of any of this material.  
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                
+                <!-------------------------------- Privacy Policy modal ---------------------------->
+                    <div class="container-fluid">
+                        <div class="modal fade model-lg" id="pp_modal" tabindex="-1" role="dialog" aria-labelledby="pp_modal" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="pp_modal">Disclaimer</h5>
+                                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p>
+                                    TailWatching.com is serious about protecting your online privacy. This Privacy Statement explains our views and practices concerning privacy, and how they may pertain to you as a user of our website.
+                                </p>
+                                <p>
+                                    “You” or “Your” means you as a participant in or as a user of the TailWatching.com website. “We” or “Our” or “Us” means TailWatching.com. “Our site” means TailWatching.com
+                                </p>
+                                <p>
+                                    All information transmitted, printed or otherwise submitted to TailWatching.com via this website shall be deemed to be the property of TailWatching.com and TailWatching.com shall be free to use such information for any lawful purpose as detailed herein.
+                                </p>
+                                <p>
+                                    This site contains links to other sites and we are not responsible for the privacy practices or the content of such sites.
+                                </p>
+                                <p>
+                                    We reserve the right to release such information to law enforcement or other governmental officials as we, in our sole and absolute discretion, deem necessary to comply with the law.
+                                </p>
+                                <p>
+                                  <b>Section 1: Collected Information</b><br>
+                                </p>
+                                    We automatically collect and/or track the following:<br><br>
+                                    <ul>
+                                    1. Information knowingly provided by you through on-line forms, registration forms, surveys, and/or other entries, such as email addresses, personal, financial or demographic information;
+                                    <br>
+                                    2. Information, user specific or aggregate, on what pages our visitors access; and
+                                    <br>
+                                    3. E-mail addresses of visitors that communicate with TailWatching.com via e-mail.
+                                    </ul>
+                                
+                                  <p>
+                                      <b>Section 2: Use of Data Collected</b><br>
+                                  </p>
+                                    
+                                  <p>We use your personal, demographic and profile data to enhance your experience at our site and to enable us to present content we think you might be interested in. We use your contact information to send you information about our company and promotional material from our partners. We may also use your personal, demographic and profile data to improve our site, for statistical analysis, for marketing and promotional purposes, and for editorial or feedback purposes for our advertisers. Information collected by us may be added to our databases and used for future telemarketing, SMS text-messaging, e-mails or postal mailings regarding site updates, new products and services, upcoming events, and/or status of orders placed online. By using this site, you agree that you may be contacted in any manner contemplated in this section even if your number is found on a do not call registry, in-house list or similar registry.
+                                  </p>
+                                  
+                                  <p>
+                                      <b>Section 3: Disclosure of Data to Third Parties</b><br>
+                                  </p>
+                                  <p>If you choose to provide personal information, it will be used for the following purposes:</p>
+                                  
+                                    <ul>
+                                        1. Considering you for a TailWatching.com product;
+                                        <br>
+                                        2. As required by law; and
+                                        <br>
+                                        3. For marketing products and services which we determine, in our sole judgment, that you might find of interest. We reserve the right to share, rent, sell, or otherwise disclose data we collect to third parties. Any third party we share, rent, sell, or otherwise disclose data to will be prescreened by us, determined by us to be reputable, and will use the personal data for marketing products and services which we determine, in our sole judgment, that you might find of interest.
+                                    </ul>
+                                  <p>
+                                    <b>Section 4: Your Opt-Out Rights</b><br>
+                                  </p>
+                                
+                                  <p> 
+                                      You may opt-out of receiving communications from us and/or our partners by not submitting your information. We also allow you to remove your information from our marketing lists. If you remove your information from our marketing lists it will no longer be used by us to send promotional correspondence to you. You can remove your information from our marketing lists by clicking on the “Unsubscribe” link at the bottom of every email we send you, or by sending your request, in writing, via email to: infoATtailwatchingDOTcom (Please replace “AT” with @ and “DOT” with .)
+                                  </p>
+                                  <p><b>Section 5: We Do Not Intend to Collect Data from Children</b></p>
+                                  <p>
+                                    The information and services provided to us or our affiliates, sponsors, and advertisers are not intended to be viewed by children (under 18 years old). No information collected from children is knowingly used for any marketing or promotional purposes whatsoever, either inside or outside TailWatching.com. No part of TailWatching.com’s web site is structured to attract anyone under the age of 18.
+                                  </p>
+                                  <p><b>Section 6: Our Right to Contact You</b></p>
+                                  <p>
+                                    We reserve the right to contact you regarding your account status and changes to subscriber agreements, privacy policy, or any other policies or agreements relevant to you.
+                                  </p>
+                                  <p><b>Section 7: Our Right to Change</b></p>
+                                  <p>
+                                    We reserve the right to change this policy at any time by notifying you of the existence and location of the new or revised privacy policy or by posting the changes online at our site.
+                                  </p>
+                                  <p><b>Section 8: Our Contact Information</b></p>
+                                  <p>
+                                    If you have any questions about this privacy statement, the practices of this site, or your dealings with this website, you can contact us via email sent to: infoATtailwatchingDOTcom (Please replace “AT” with @ and “DOT” with .)
+                                  </p>
+                                  <p><b>Section 9: Anti Spam Policy. Can-Spam Act Compliance</b></p>
+                                  <p>
+                                    TailWatching.com is dedicated to ensuring compliance with the ‘Can-Spam Act’, which took effect January 1, 2004. You may receive email from TailWatching.com in the following circumstances:
+                                  </p>
+                                  <ul>
+                                        1. Acknowledging your application has been received and requesting additional action
+                                        <br>
+                                        2. Requests for additional information to support your current application
+                                        <br>
+                                        3. Response to your inquiries regarding the status of your transactional requests
+                                        <br>
+                                        4. Thanking you for your valued business
+                                        <br>
+                                        5. Advertisements for our products, services, changes in services, new product availability
+                                        <br>
+                                        6. Advertisements for third party products and services where we have determined that such product or service may be of interest to our customers
+                                    </ul>
+                                  <p>To ensure compliance with the Can-Spam Act, TailWatching.com has implemented the following guidelines for email delivery:</p>
+                                  <ul>
+                                        1. All emails sent to you by TailWatching.com will clearly identify TailWatching.com as the sender. FROM / SENDER: someone@TailWatching.com (NOTE: The actual sender will alter from department to department, but all from addresses will end with @TailWatching.com).
+                                        <br>
+                                        2. The Subject Line of any email you receive will always accurately describe the subject matter of the email.
+                                        <br>
+                                        3. Any email from TailWatching.com will include the ability to unsubscribe from future email messages.
+                                        <br>
+                                        4. Unsubscribing will ensure the customer is removed from ALL lists at TailWatching.com; this excludes customer service emails regarding the processing and status of a current product.
+                                        <br>
+                                        5. All emails sent to you directly by TailWatching.com include valid postal address information in the footer.
+                                        <br>
+                                        6. All third party marketing partners are required to comply with the Can-Spam Act.
+                                        <br>
+                                        7. Emails sent to you directly by TailWatching.com will include an email address and physical address where you can send suggestions, complaints or other correspondence.
+                                    </ul>
+                                    <p><b>Section 10: Information for ISPs</b></p>
+                                    <p>Website: TailWatching.com<br>Email Address: infoATtailwatchingDOTcom<br>(Please replace “AT” with @ and “DOT” with .)</p>
+                                    <p>TailWatching.com understands consumers’ concerns over the use of their personal information. We hope this information will relieve any concerns your company may have regarding our email policies. TailWatching.com and its affiliated sites use only an “opt-in or opt out” method of obtaining customer information, and it is not our policy or desire to send unsolicited email. We obtain email addresses and personal information from third parties that follow the same set of policies. TailWatching.com email messages sent always include information about the origin of the emails and instructions on how recipients can unsubscribe from receiving future email messages.
+                                    </p>
+                                  <p>From time to time, TailWatching.com will enter into an arrangement with a third party website to allow individuals to opt into our marketing program on those third party websites. In each case the third party websites have represented and warranted to us, among other things,</p>
+                                  <ul>
+                                        1. That the data was collected voluntarily from individuals on website registrations and co-registrations,
+                                        <br>
+                                        2. That the sellers have a right, under any applicable privacy statements, to transfer the data to us, and
+                                        <br>
+                                        3. That TailWatching.com has the right to send marketing offers to the individuals.
+                                </ul>
+                                  <p>We hope this information satisfies any questions or concerns you may have regarding the email practices of TailWatching.com. If you have additional questions or wish to discuss this matter further, please contact us at: infoATtailwatchingDOTcom (Please replace “AT” with @ and “DOT” with .)</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+               
+               
+            </div>
+            <div class="container px-4"><p class="m-0 text-center text-white">&copy; 2024 Tail Watching - By William Chung. All rights reserved.</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script-->
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
